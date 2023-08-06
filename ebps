@@ -48,7 +48,7 @@ case $1 in
 	h)
 	 echo "${blue}usage: i: install programs
 	
-	 u: update the system
+	 U: update the system
 	
 	 s: search for a package
 
@@ -64,7 +64,7 @@ case $1 in
          echo "${blue}
 	 usage: i: install programs
 	
-	 u: update the system
+	 U: update the system
 	
 	 s: search for a package
 
