@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-git clone 
+git clone https://github.com/hexisXz/ebps.git && cd ebps && sudo mv ebps /bin/
