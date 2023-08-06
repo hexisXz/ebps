@@ -19,7 +19,7 @@ case $1 in
 
  	U)
 	 echo "${green}Updating ebps..${green}"
-	 wget https://raw.githubusercontent.com/hexisXz/ebps/main/install && sh install
+	 wget https://raw.githubusercontent.com/hexisXz/ebps/main/install && sh install && rm install
 	 ;;
 
 
