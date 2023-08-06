@@ -1,0 +1,79 @@
+#!/bin/sh
+
+
+# colors
+red='\033[0;31m'
+blue='\033[0;34m'
+green='\033[0;32m'
+purple='\033[0;35m'
+NC='\033[0m' # No Color
+
+
+
+case $1 in
+	i)
+	 echo "${blue}installing..${blue}"
+	 xbps-install -Sy $2
+	 ;;
+
+
+ 	U)
+	 echo "${green}Updating..${green}"
+	 xbps-install -Syu && xcheckrestart
+	 ;;
+
+
+	s)
+	 echo "${purple}Searching${purple}"
+	 xbps-query -Rs $2
+	 ;;
+
+
+	l)
+	 xbps-query -l
+	 ;;
+
+	
+       sl)
+	 xbps-query -l | grep $2
+	 ;;
+
+
+	R)
+	 echo "${red}REMOVING${red}"
+	 sudo xbps-remove $2
+	 ;;
+
+
+	h)
+	 echo "${blue}usage: i: install programs
+	
+	 u: update the system
+	
+	 s: search for a package
+
+	 l: list all installed packages
+
+	 sl: search for installed programs 
+
+	 R: remove a package"
+	 ;;
+
+
+	*)
+         echo "${blue}
+	 usage: i: install programs
+	
+	 u: update the system
+	
+	 s: search for a package
+
+	 l: list all installed packages
+
+	 sl: search for installed programs
+
+	 R: remove a package"
+      	 ;;	
+
+
+esac
