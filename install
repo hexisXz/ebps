@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-git clone https://github.com/hexisXz/ebps.git && cd ebps && sudo mv ebps /bin/ && sudo rm -r ../ebps
+gsudo rm -r ../ebp ; sit clone https://github.com/hexisXz/ebps.git && cd ebps && sudo mv ebps /bin/ 
